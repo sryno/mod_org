@@ -169,6 +169,18 @@ class KerasNN(object):
             input_x = self.computeFingerprints(train_x)
             return self.model.evaluate(input_x, train_y, verbose=0)
 
+    def load(self, file):
+        """
+        Loads a previously trained model
+
+        Arguments
+        -----------
+            - file: A string pointing to the .h5 file
+        """
+
+        with self.graph.as_default():
+            self.model = load_model(file)
+
     def train(self, train_x, train_y, batch_size, nepochs, earlystopping=True, min_delta=0.001):
         """
         Trains the model
