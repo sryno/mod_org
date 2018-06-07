@@ -2733,6 +2733,7 @@ class ORGANIC(object):
         self.LOADINGS[name] = data[1]
         if self.verbose:
             print('Loaded metric {}'.format(name))
+        return
 
      def set_training_program(self, metrics=None, steps=None):
         """
