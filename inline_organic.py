@@ -392,8 +392,7 @@ class Generator(object):
             self.g_logits.stack(), perm=[1, 0, 2])  # batch_size x seq_length x vocab_size
         self.pretrain_loss = -tf.reduce_sum(
             tf.one_hot(tf.to_int32(tf.reshape(self.x, [-1])), self.num_emb, 1.0, 0.0) * tf.log(
-                tf.clip_by_value(tf.reshape(self.g_predictions, [-1, self.num_emb]), 1e-20, 1.0))) 
-                                    / (self.sequence_length * self.batch_size)
+                tf.clip_by_value(tf.reshape(self.g_predictions, [-1, self.num_emb]), 1e-20, 1.0))) / (self.sequence_length * self.batch_size)
 
         pretrain_opt = self.g_optimizer(self.learning_rate)  # training updates
         self.pretrain_grad, _ = tf.clip_by_global_norm(tf.gradients(self.pretrain_loss, self.g_params), 
