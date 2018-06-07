@@ -100,6 +100,8 @@ def pick_gpu_lowest_memory():
 #     from keras import backend as K
 import tensorflow as tf
 device_name = tf.test.gpu_device_name()
+config = tf.ConfigProto(log_device_placement=True)
+config.gpu_options.allow_growth = True
 from keras import backend as K
 from keras.layers import Dense, Dropout
 from keras.models import Sequential, load_model
