@@ -56,7 +56,7 @@ def list_available_gpus():
     result = []
     for line in output.strip().split("\n"):
         m = gpu_regex.match(line)
-        assert m, "Couldnt parse " + line
+        assert m, "Couldn't parse " + line
         result.append(int(m.group("gpu_id")))
     return result
 
@@ -95,6 +95,8 @@ try:
     from keras import backend as K
 except Exception:
     import tensorflow as tf
+    config = tf.ConfigProto()
+    config.gpu_options.allow_growth = True
     from keras import backend as K
 from keras.layers import Dense, Dropout
 from keras.models import Sequential, load_model
