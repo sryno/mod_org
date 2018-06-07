@@ -14,13 +14,18 @@
       <file leaf-file-name="inline_organic.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inline_organic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="2729" column="12" lean-forward="true" selection-start-line="2729" selection-start-column="12" selection-end-line="2729" selection-end-column="12" />
+            <state relative-caret-position="176">
+              <caret line="1343" column="23" lean-forward="true" selection-start-line="1343" selection-start-column="23" selection-end-line="1343" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>core_rnn_cell_impl</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -43,8 +48,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="642" />
-    <option name="y" value="81" />
+    <option name="x" value="261" />
+    <option name="y" value="80" />
     <option name="width" value="1821" />
     <option name="height" value="1306" />
   </component>
@@ -100,7 +105,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="211" y="65" width="1821" height="1306" extended-state="0" />
+    <frame x="642" y="81" width="1821" height="1306" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -136,8 +141,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/inline_organic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="2729" column="12" lean-forward="true" selection-start-line="2729" selection-start-column="12" selection-end-line="2729" selection-end-column="12" />
+        <state relative-caret-position="176">
+          <caret line="1343" column="23" lean-forward="true" selection-start-line="1343" selection-start-column="23" selection-end-line="1343" selection-end-column="23" />
         </state>
       </provider>
     </entry>
