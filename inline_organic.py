@@ -86,18 +86,21 @@ def pick_gpu_lowest_memory():
     return best_gpu
 
 # ML imports
-try:
-    gpu_free_number = str(pick_gpu_lowest_memory())
-    os.environ['CUDA_VISIBLE_DEVICES'] = '{}'.format(gpu_free_number)
-    import tensorflow as tf
-    config = tf.ConfigProto()
-    config.gpu_options.allow_growth = True
-    from keras import backend as K
-except Exception:
-    import tensorflow as tf
-    config = tf.ConfigProto()
-    config.gpu_options.allow_growth = True
-    from keras import backend as K
+# try:
+#     gpu_free_number = str(pick_gpu_lowest_memory())
+#     os.environ['CUDA_VISIBLE_DEVICES'] = '{}'.format(gpu_free_number)
+#     import tensorflow as tf
+#     config = tf.ConfigProto()
+#     config.gpu_options.allow_growth = True
+#     from keras import backend as K
+# except Exception:
+#     import tensorflow as tf
+#     config = tf.ConfigProto()
+#     config.gpu_options.allow_growth = True
+#     from keras import backend as K
+import tensorflow as tf
+device_name = tf.test.gpu_device_name()
+from keras import backend as K
 from keras.layers import Dense, Dropout
 from keras.models import Sequential, load_model
 from keras.layers.normalization import BatchNormalization
@@ -2329,7 +2332,7 @@ class ORGANIC(object):
         rdBase.DisableLog('rdApp.error')
 
         # Set configuration for GPU
-        self.config = tf.ConfigProto()
+        self.config = tf.ConfigProto(log_device_placement=True)
         self.config.gpu_options.allow_growth = True
 
         # Set model parameters
