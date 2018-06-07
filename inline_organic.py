@@ -2452,9 +2452,6 @@ class ORGANIC(object):
         # Load training set
         self.train_samples = load_train_data(file)
 
-        # Load training set
-        self.train_samples = load_train_data(file)
-
         # Process and create vocabulary
         self.char_dict, self.ord_dict = build_vocab(self.train_samples)
         self.NUM_EMB = len(self.char_dict)
@@ -3151,4 +3148,3 @@ class ORGANIC(object):
 
         print('\n######### FINISHED #########')
 
-    
