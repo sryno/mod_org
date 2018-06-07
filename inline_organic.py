@@ -30,27 +30,6 @@ from rdkit.Chem import Crippen, MolFromSmiles, MolToSmiles, Descriptors
 import pymatgen as mg 
 from pymatgen.symmetry.analyzer import PointGroupAnalyzer
 
-# ML imports
-try:
-    gpu_free_number = str(pick_gpu_lowest_memory())
-    os.environ['CUDA_VISIBLE_DEVICES'] = '{}'.format(gpu_free_number)
-    import tensorflow as tf
-    config = tf.ConfigProto()
-    config.gpu_options.allow_growth = True
-    from keras import backend as K
-except Exception:
-    import tensorflow as tf
-    from keras import backend as K
-from keras.layers import Dense, Dropout
-from keras.models import Sequential, load_model
-from keras.layers.normalization import BatchNormalization
-from keras.callbacks import EarlyStopping
-from keras_tqdm import TQDMCallback
-from tensorflow.python.ops import tensor_array_ops, control_flow_ops
-from tensorflow.contrib.rnn.python.ops import core_rnn_cell
-from tensorflow import logging
-from tqdm import tqdm
-
 #####################################################
 # This built from the ORGANIC program of Aspuru-Guzik
 # It has been only lightly modified by S. Ryno to 
@@ -105,6 +84,27 @@ def pick_gpu_lowest_memory():
     memory_gpu_map = [(memory, gpu_id) for (gpu_id, memory) in gpu_memory_map().items()]
     best_memory, best_gpu = sorted(memory_gpu_map)[0]
     return best_gpu
+
+# ML imports
+try:
+    gpu_free_number = str(pick_gpu_lowest_memory())
+    os.environ['CUDA_VISIBLE_DEVICES'] = '{}'.format(gpu_free_number)
+    import tensorflow as tf
+    config = tf.ConfigProto()
+    config.gpu_options.allow_growth = True
+    from keras import backend as K
+except Exception:
+    import tensorflow as tf
+    from keras import backend as K
+from keras.layers import Dense, Dropout
+from keras.models import Sequential, load_model
+from keras.layers.normalization import BatchNormalization
+from keras.callbacks import EarlyStopping
+from keras_tqdm import TQDMCallback
+from tensorflow.python.ops import tensor_array_ops, control_flow_ops
+from tensorflow.contrib.rnn.python.ops import core_rnn_cell
+from tensorflow import logging
+from tqdm import tqdm
 
 #############################################
 # NN Metrics
