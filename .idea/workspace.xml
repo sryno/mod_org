@@ -14,8 +14,8 @@
       <file leaf-file-name="inline_organic.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inline_organic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="2742" column="19" lean-forward="true" selection-start-line="2742" selection-start-column="19" selection-end-line="2742" selection-end-column="19" />
+            <state relative-caret-position="215">
+              <caret line="2729" column="12" lean-forward="true" selection-start-line="2729" selection-start-column="12" selection-end-line="2729" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -43,8 +43,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="211" />
-    <option name="y" value="65" />
+    <option name="x" value="642" />
+    <option name="y" value="81" />
     <option name="width" value="1821" />
     <option name="height" value="1306" />
   </component>
@@ -136,8 +136,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/inline_organic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="2742" column="19" lean-forward="true" selection-start-line="2742" selection-start-column="19" selection-end-line="2742" selection-end-column="19" />
+        <state relative-caret-position="215">
+          <caret line="2729" column="12" lean-forward="true" selection-start-line="2729" selection-start-column="12" selection-end-line="2729" selection-end-column="12" />
         </state>
       </provider>
     </entry>
